@@ -57,4 +57,30 @@ var pessoa;
     h.addPacientes(p);
     h.addPacientes(p1);
     h.addPacientes(p2);
+    document.getElementById("hospital").textContent = h.getnome();
+    var tbMedico = document.getElementById("tbMedico");
+    h.getmedicos().forEach(function (h) {
+        var nome = h.getnome();
+        var cpf = h.getcpf();
+        var crm = h.getcrm();
+        var especialidade = h.getespecialidade();
+        var html = "<tr><td>" + nome + "</td><td>" + cpf + "</td><td>" + crm + "</td><td>" + especialidade + "</td></tr>";
+        tbMedico.innerHTML += html;
+    });
+    var tbEnfermeiras = document.getElementById("tbEnfermeiras");
+    h.getEnfermeiros().forEach(function (h) {
+        var nome = h.getnome();
+        var cpf = h.getcpf();
+        var corem = h.getcoren();
+        var html = "<tr><td>" + nome + "</td><td>" + cpf + "</td><td>" + corem + "</td></tr>";
+        tbEnfermeiras.innerHTML += html;
+    });
+    var tbPacientes = document.getElementById("tbPacientes");
+    h.getpacientes().forEach(function (h) {
+        var nome = h.getnome();
+        var cpf = h.getcpf();
+        var cod = h.getcodPaciente();
+        var html = "<tr><td>" + nome + "</td><td>" + cpf + "</td><td>" + cod + "</td></tr>";
+        tbPacientes.innerHTML += html;
+    });
 })(pessoa || (pessoa = {}));

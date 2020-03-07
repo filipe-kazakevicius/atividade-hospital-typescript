@@ -19,10 +19,10 @@ var pessoa;
         function Enfermeiro() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
-        Enfermeiro.prototype.getEnfermeiro = function () {
+        Enfermeiro.prototype.getcoren = function () {
             return this.coren;
         };
-        Enfermeiro.prototype.setEnfermeiro = function (coren) {
+        Enfermeiro.prototype.setcoren = function (coren) {
             this.coren = coren;
         };
         return Enfermeiro;

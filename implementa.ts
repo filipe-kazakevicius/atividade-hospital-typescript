@@ -54,7 +54,7 @@ namespace pessoa{
         m2.setcpf("123.123.123-13");
         m2.setcodFuncionario(23);
 
-        let h = new Hospital ();
+    let h = new Hospital ();
         h.setnome ("Santa Casa de Misericórdia")
         h.addEnfermeiros(e);
         h.addEnfermeiros(e1);
@@ -65,4 +65,33 @@ namespace pessoa{
         h.addPacientes(p);
         h.addPacientes(p1);
         h.addPacientes(p2);
+
+        document.getElementById("hospital").textContent=h.getnome();
+
+        let tbMedico = document.getElementById("tbMedico");
+        h.getmedicos().forEach(h=>{
+            let nome = h.getnome();
+            let cpf = h.getcpf();
+            let crm = h.getcrm();
+            let especialidade = h.getespecialidade();
+            let html = "<tr><td>"+nome+"</td><td>"+cpf+"</td><td>"+crm+"</td><td>"+especialidade+"</td></tr>";
+            tbMedico.innerHTML += html;
+        })
+        let tbEnfermeiras = document.getElementById("tbEnfermeiras");
+        h.getEnfermeiros().forEach(h=>{
+            let nome = h.getnome();
+            let cpf = h.getcpf();
+            let corem = h.getcoren();
+            let html = "<tr><td>"+nome+"</td><td>"+cpf+"</td><td>"+corem+"</td></tr>";
+            tbMedico.innerHTML += html;
+        })
+        let tbPacientes = document.getElementById("tbPacientes");
+        h.getpacientes().forEach(h=>{
+            let nome = h.getnome();
+            let cpf = h.getcpf();
+            let cod = h.getcodPaciente();
+            let html = "<tr><td>"+nome+"</td><td>"+cpf+"</td><td>"+cod+"</td></tr>";
+            tbMedico.innerHTML += html;
+        })
+
 }

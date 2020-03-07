@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>O hospital do boris</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<!-- Medicos -->
+		<div class="row">
+			<div class="hospital" id="hospital"></div> <!-- aqui tu coloca o nome do seu hospital -->				
+		</div>
+		<hr>
+
+
+		<!-- Medicos -->
+		<div class="row">
+			<div class="col-md-12"><h1>Médicos</h1></div>
+			<div class="col-md-12">
+				<table class="table" id="tbMedico">
+					<thead>
+					    <tr>
+					      <th scope="col">Nome</th>
+					      <th scope="col">CPF</th>
+					      <th scope="col">CRM</th>
+					      <th scope="col">Especialidade</th>
+					    </tr>
+					  </thead>
+					</table>
+			</div>
+		</div>
+
+		<!-- Enfermeiros -->
+		<div class="row">
+			<div class="col-md-12"><h1>Enfermeiras</h1></div>
+			<div class="col-md-12">
+				<table class="table" id="tbEnfermeiras">
+					<thead>
+					    <tr>
+					      <th scope="col">Nome</th>
+					      <th scope="col">CPF</th>
+					      <th scope="col">Coren</th>
+					    </tr>
+					  </thead>
+					</table>
+			</div>
+		</div>
+
+		<!--Pacientes -->
+		<div class="row">
+			<div class="col-md-12"><h1>Pacientes</h1></div>
+			<div class="col-md-12">
+				<table class="table" id ="tbPacientes">
+					<thead>
+					    <tr>
+					      <th scope="col">Nome</th>
+					      <th scope="col">CPF</th>
+					      <th scope="col">CodPaciente</th>
+					    </tr>
+					  </thead>
+					</table>
+			</div>
+		</div>
+
+	</div>
+    <script src="pessoa.js"></script>
+    <script src="paciente.js"></script>
+    <script src="funcionario.js"></script>
+    <script src="medico.js"></script>
+    <script src="enfermeiro.js"></script>
+    <script src="hospital.js"></script>
+    <script src="implementa.js"></script>
+
+</body>
+</html>

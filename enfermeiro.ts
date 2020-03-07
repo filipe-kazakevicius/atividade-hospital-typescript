@@ -2,11 +2,11 @@ namespace pessoa{
     export class Enfermeiro extends Funcionario{
         private coren : number;
 
-        getEnfermeiro(){
+        getcoren(){
            return this.coren;
         }
 
-        setEnfermeiro(coren:number){
+        setcoren(coren:number){
             this.coren = coren;
         }
     }

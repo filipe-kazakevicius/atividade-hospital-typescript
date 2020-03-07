@@ -1,9 +1,9 @@
-namespace Hospital{
+namespace pessoa{
     export class Hospital{
         private nome: string;
         private enfermeiros: Array <Enfermeiro> = [];
-        private medicos: Array <Medicos> = [];
-        private pacientes: Array <Pacientes> = [];
+        private medicos: Array <Medico> = [];
+        private pacientes: Array <Paciente> = [];
 
         getnome (){
             return this.nome;
@@ -13,7 +13,7 @@ namespace Hospital{
             this.nome = nome;
         }
         
-        addEnfermeiros (enfermeiros:Enfermeiros):void{
+        addEnfermeiros (enfermeiros:Enfermeiro):void{
             this.enfermeiros.push(enfermeiros);
         }
 
@@ -21,14 +21,14 @@ namespace Hospital{
             return this.enfermeiros;
         }
 
-        addMedicos (medicos:Medicos):void{
+        addMedicos (medicos:Medico):void{
             this.medicos.push(medicos);
         }
         getmedicos(){
             return this.medicos;
         }
 
-        addPacientes(pacientes:Pacientes):void{
+        addPacientes(pacientes:Paciente):void{
             this.pacientes.push(pacientes);
         }
         getpacientes(){
